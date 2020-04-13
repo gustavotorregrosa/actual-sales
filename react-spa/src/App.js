@@ -80,8 +80,8 @@ class App extends React.Component {
         }}>
           <Router history={ history } >
             <Switch>
-              <Route path='/login' component={ LoginScreen } />
-              <Route path='/register' component={ RegisterScreen } />
+              <Route path='/login' exact component={ LoginScreen } />
+              <Route path='/register' exact component={ RegisterScreen } />
               <Route path='/' component={MainScreen} />
             </Switch>
           </Router>

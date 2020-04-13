@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import SplashScreen from './splashScreen'
 import FileImportScreen from './fileImport'
 import history from '../../suport/history'
-import { Route, BrowserRouter, Switch, withRouter } from 'react-router-dom'
+import { Route, BrowserRouter, Switch, withRouter, Redirect } from 'react-router-dom'
 import UserContext  from '../../suport/userContext'
 import NavBar from './navBar'
 import ClientsReport from './reports/clients'
@@ -27,6 +27,7 @@ class MainScreen extends Component {
                                 <Route path='/unit-client-report/:id' component={UnitClientReport} />
                                 <Route path='/unit-deal-report/:id' component={UnitDealReport} />
                                 <Route path='/' exact component={SplashScreen} />
+                                <Redirect from="/*" to="/" />
                             </Switch>
                         </div>
                     </div>    
